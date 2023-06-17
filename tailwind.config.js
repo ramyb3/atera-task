@@ -17,6 +17,22 @@ module.exports = {
         ateraPink: "#FF176B",
         gold: "#D1AD78",
       },
+      keyframes: {
+        rotate: {
+          "25%": {
+            transform: "rotate(270deg)",
+          },
+          "50%": {
+            transform: "rotate(-180deg)",
+          },
+          "100%": {
+            transform: "rotate(0)",
+          },
+        },
+      },
+      animation: {
+        image: "rotate 2s",
+      },
     },
   },
   plugins: [],

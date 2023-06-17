@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Roboto } from "next/font/google";
 import Head from "next/head";
+import { Roboto } from "next/font/google";
 import {
   badges,
   Logo,
@@ -17,7 +17,7 @@ const roboto = Roboto({
 
 export default function MainPage() {
   return (
-    <div className={`h-full ${roboto.className}`}>
+    <div className={`h-full overflow-x-hidden ${roboto.className}`}>
       <Head>
         <title>Atera task</title>
       </Head>
