@@ -80,7 +80,7 @@ export function SiteDescription() {
 
   return (
     <>
-      <h1 className="h-24 text-5xl text-center phone:text-4xl font-black max-w-[350px] phone:max-w-[300px]">
+      <h1 className="h-24 text-5xl text-center phone:text-4xl font-black max-w-[360px] phone:max-w-[300px]">
         {headline}
       </h1>
 
