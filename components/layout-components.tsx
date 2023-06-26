@@ -9,26 +9,9 @@ import badge2 from "@/public/assets/badges/os-2.svg";
 import badge3 from "@/public/assets/badges/os-3.svg";
 import badge4 from "@/public/assets/badges/2023.svg";
 
-export const badges = [
-  {
-    image: badge1,
-    name: "badge1",
-  },
-  {
-    image: badge2,
-    name: "badge2",
-  },
-  {
-    image: badge3,
-    name: "badge3",
-  },
-  {
-    image: badge4,
-    name: "badge4",
-  },
-];
-
 const images = [dashboard1, dashboard2, dashboard3];
+
+export const badges = [badge1, badge2, badge3, badge4];
 
 export function Button() {
   return (
@@ -107,8 +90,8 @@ export function Icons() {
         return (
           <Image
             key={index}
-            src={data.image}
-            alt={data.name}
+            src={data}
+            alt={`badge${index + 1}`}
             className={
               index === badges.length - 1
                 ? "grid phone:hidden border-l-2 border-gray-400 pl-6 w-fit"
@@ -124,14 +107,6 @@ export function Icons() {
 export function DashboardImages() {
   const [imageIndex, setImageIndex] = useState(0);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    }
-  }, [loading]);
 
   return (
     <div className="flex flex-col gap-2 mt-8">
@@ -154,6 +129,10 @@ export function DashboardImages() {
               onClick={() => {
                 setImageIndex(index);
                 setLoading(true);
+
+                setTimeout(() => {
+                  setLoading(false);
+                }, 2000);
               }}
             >
               ●

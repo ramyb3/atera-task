@@ -52,9 +52,9 @@ function LayoutMobile() {
       <DashboardImages />
       <Icons />
       <Image
-        src={badges[badges.length - 1].image}
+        src={badges[badges.length - 1]}
         className="hidden phone:block"
-        alt={badges[badges.length - 1].name}
+        alt={`badge${badges.length}`}
       />
     </div>
   );
